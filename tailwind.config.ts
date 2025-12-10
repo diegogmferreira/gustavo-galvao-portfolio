@@ -1,3 +1,4 @@
+import cornerShape from '@toolwind/corner-shape';
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,7 +9,7 @@ const config: Config = {
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   // theme: {},
-  plugins: []
+  plugins: [cornerShape]
 }
 
 export default config;

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@toolwind/corner-shape";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --font-sans: var(--font-sans);
@@ -40,6 +43,60 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --animate-marquee-left: marquee-left var(--marquee-duration) linear var(--marquee-loop-count);
+  --animate-marquee-right: marquee-right var(--marquee-duration) linear var(--marquee-loop-count);
+  --animate-marquee-left-rtl: marquee-left-rtl var(--marquee-duration) linear var(--marquee-loop-count);
+  --animate-marquee-right-rtl: marquee-right-rtl var(--marquee-duration) linear var(--marquee-loop-count);
+  --animate-marquee-up: marquee-up var(--marquee-duration) linear var(--marquee-loop-count);
+  --animate-marquee-down: marquee-down var(--marquee-duration) linear var(--marquee-loop-count);
+  @keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+    }
+  100% {
+    transform: translateX(calc(-100% - var(--marquee-gap)));
+    }
+  }
+  @keyframes marquee-right {
+  0% {
+    transform: translateX(calc(-100% - var(--marquee-gap)));
+    }
+  100% {
+    transform: translateX(0%);
+    }
+  }
+  @keyframes marquee-up {
+  0% {
+    transform: translateY(0%);
+    }
+  100% {
+    transform: translateY(calc(-100% - var(--marquee-gap)));
+    }
+  }
+  @keyframes marquee-down {
+  0% {
+    transform: translateY(calc(-100% - var(--marquee-gap)));
+    }
+  100% {
+    transform: translateY(0%);
+    }
+  }
+  @keyframes marquee-left-rtl {
+  0% {
+    transform: translateX(0%);
+    }
+  100% {
+    transform: translateX(calc(100% + var(--marquee-gap)));
+    }
+  }
+  @keyframes marquee-right-rtl {
+  0% {
+    transform: translateX(calc(100% + var(--marquee-gap)));
+    }
+  100% {
+    transform: translateX(0%);
+    }
+  }
 }
 
 :root {
@@ -94,4 +151,19 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .swiper-carousel {
+    padding-bottom: 50px !important;
+  }
+  
+
+  .swiper-carousel .swiper-pagination-bullet {
+    background-color: white !important;
+  }
+  
+  
+  .swiper-carousel .swiper-pagination-bullet-active {
+    background-color: white !important;
+  }
+  
 }

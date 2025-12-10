@@ -1,12 +1,11 @@
 import type { SVGAttributes } from "react";
 
-const Logo = (props: SVGAttributes<SVGElement>) => (
+const Logo = ({ className, ...props }: SVGAttributes<SVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="157"
-    height="37"
     fill="none"
     viewBox="0 0 157 37"
+    className={className || "w-32 h-auto"}
     {...props}
   >
     <path

@@ -51,7 +51,7 @@ export function Header({ navigationData, className }: HeaderProps) {
 
   return (
     <header className={cn(
-      'bg-background sticky top-0 z-50 h-16 transition-all',
+      'bg-background sticky top-0 z-[100] h-16 transition-all',
       { "border-b bg-background/75 shadow-md backdrop-blur": scrolled },
       className
     )}>
