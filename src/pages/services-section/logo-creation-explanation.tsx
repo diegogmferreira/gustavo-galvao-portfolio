@@ -7,9 +7,9 @@ import pietroWhiteLogo from "@/assets/pietro-white-logo.svg";
 
 export function LogoExplanation() {
   return (
-    <div className="flex justify-between py-10">
+    <div className="flex md:flex-row flex-col justify-between py-10">
       <div className="flex flex-col items-center justify-between mb-14">
-        <div className="flex flex-col gap-16 items-center">
+        <div className="flex flex-col md:gap-16 gap-6 items-center">
           <img src={pietroWhiteLogo} />
 
           <div className="flex flex-col gap-4 items-center">
@@ -18,7 +18,7 @@ export function LogoExplanation() {
           </div>
         </div>
 
-        <div className="flex gap-32">
+        <div className="flex md:flex-row flex-col gap-8 md:gap-32 max-md:mt-10 max-md:mx-16">
           <img src={croserImg} />
 
           <div className="flex flex-col gap-4">
@@ -28,7 +28,7 @@ export function LogoExplanation() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-16 items-center">
+      <div className="flex flex-col md:gap-16 gap-6 items-center">
         <img src={pietroColorLogo} />
 
         <div className="flex flex-col gap-4 items-center justify-center">

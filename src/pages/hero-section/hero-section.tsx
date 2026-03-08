@@ -7,28 +7,28 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 export function HeroSection() {
-  const [transform, setTransform] = useState(
-    "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)"
-  );
+  // const [transform, setTransform] = useState(
+  //   "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)"
+  // );
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = ((y - centerY) / centerY) * 10;
-    const rotateY = ((x - centerX) / centerX) * -10;
-    setTransform(
-      `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1)`
-    );
-  };
+  // const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  //   const rect = e.currentTarget.getBoundingClientRect();
+  //   const x = e.clientX - rect.left;
+  //   const y = e.clientY - rect.top;
+  //   const centerX = rect.width / 2;
+  //   const centerY = rect.height / 2;
+  //   const rotateX = ((y - centerY) / centerY) * 10;
+  //   const rotateY = ((x - centerX) / centerX) * -10;
+  //   setTransform(
+  //     `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1)`
+  //   );
+  // };
 
-  const handleMouseLeave = () => {
-    setTransform(
-      "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)"
-    );
-  };
+  // const handleMouseLeave = () => {
+  //   setTransform(
+  //     "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)"
+  //   );
+  // };
 
   return (
     <>
@@ -36,7 +36,7 @@ export function HeroSection() {
         <div
           className={cn(
             "relative z-10  rounded-2xl overflow-hidden ",
-            // "w-[963px]",
+            "max-md:absolute max-md:opacity-40"
           )}
         >
           <img
@@ -46,11 +46,11 @@ export function HeroSection() {
         </div>
 
         <div className="relative z-10 lg:max-w-2xl md:max-w-lg">
-          <DotsVisualElement />
+          <DotsVisualElement className="max-md:hidden" />
 
           <div
             className={cn(
-              "flex flex-col pt-64 md:mt-0 lg:ml-16 text-left space-y-5",
+              "max-md:mx-10 flex flex-col pt-20 md:pt-64 md:mt-0 lg:ml-16 text-left space-y-5",
               "2xl:-translate-x-56 xl:-translate-x-40 lg:-translate-x-32 "
             )}
           >
@@ -72,7 +72,7 @@ export function HeroSection() {
               é uma oportunidade de unir técnica, sensibilidade e propósito, sempre em busca de resultados que inspirem e
               façam a diferença.
             </span>
-            <div className="flex gap-4">
+            <div className="flex gap-4 max-md:justify-center">
               <Button asChild variant="secondary">
                 <a href="#" > Behance </a>
               </Button>

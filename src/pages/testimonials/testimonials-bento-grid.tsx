@@ -19,7 +19,7 @@ export function TestimonialsBentoGrid() {
       </TestimonialBentoCard>
       <TestimonialBentoCard className='bg-emerald-300 col-span-2 p-4'>
         <div className='flex flex-col justify-between h-full text-background'>
-          <span className='text-lg font-normal'>
+          <span className='md:text-lg text-sm font-normal'>
             Ficou simplesmente sensacional,
             do jeitinho que eu queria, até
             melhor, parabéns pelo
@@ -28,8 +28,8 @@ export function TestimonialsBentoGrid() {
 
           <div className=''>
             <hr className='mb-3 border-background/50' />
-            <p className='text-lg'>Rogério Ventriglio</p>
-            <p className='text-sm leading-snug'>Empresário</p>
+            <p className='md:text-lg text-sm'>Rogério Ventriglio</p>
+            <p className='md:text-sm text-xs leading-snug'>Empresário</p>
           </div>
         </div>
       </TestimonialBentoCard>
@@ -50,7 +50,7 @@ export function TestimonialsBentoGrid() {
 
       <TestimonialBentoCard className='bg-primary col-span-2 p-4'>
         <div className='flex flex-col justify-between h-full'>
-          <span className='text-lg font-normal'>
+          <span className='md:text-lg text-sm font-normal'>
             Profissional incrível! Sempre entrega artes de
             altíssima qualidade, alinhadas exatamente com
             o que eu precisava! <br />
@@ -59,8 +59,8 @@ export function TestimonialsBentoGrid() {
 
           <div className=''>
             <hr className='mb-3 border-white/50' />
-            <p className='text-lg'>Karine</p>
-            <p className='text-sm leading-snug'>Empresária</p>
+            <p className='md:text-lg text-sm'>Karine</p>
+            <p className='md:text-sm text-xs leading-snug'>Empresária</p>
           </div>
         </div>
       </TestimonialBentoCard>

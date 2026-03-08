@@ -5,20 +5,21 @@ import { SocialCardsMarquee } from "./social-cards-marquee"
 
 export function SocialMediaService() {
   return (
-    <section className="max-w-[1920px] w-full mx-auto px-10 space-y-20">
+    <section className="max-w-[1920px] w-full mx-auto px-10 md:space-y-20">
       <div className="max-w-7xl mx-auto px-10">
-        <div className="flex py-10 items-center justify-between gap-10">
+        <div className="flex flex-col md:flex-row py-10 items-center justify-between gap-10">
           <div className="flex flex-col">
-            <p className="uppercase text-white font-semibold text-7xl leading-8">SOCIAL</p>
+            <p className="uppercase text-white font-semibold md:text-7xl text-6xl leading-8">SOCIAL</p>
             <p className={cn(
-              "uppercase font-extrabold text-9xl",
-              "md:block hidden font-extrabold text-transparent",
+              "uppercase font-extrabold md:text-9xl text-8xl",
+              "font-extrabold text-transparent",
               "bg-clip-text pointer-events-none select-none",
               "[-webkit-text-stroke:2px_#DE0147]"
             )}>
               MEDIA
             </p>
-            <p className="text-2xl">Modelos de posts de algumas <br /> empresas de diversos segmentos</p>
+            <p className="max-md:hidden text-2xl">Modelos de posts de algumas <br /> empresas de diversos segmentos</p>
+            <p className="text-xl text-center">Modelos de posts de algumas empresas de diversos segmentos</p>
           </div>
 
           <Card className={cn("bg-[#040404] py-0 gap-0 rounded-4xl")}>

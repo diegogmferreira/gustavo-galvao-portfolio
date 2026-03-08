@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 export function StoryTelling() {
   return (
     <div className="flex flex-col mt-40 space-y-20">
-      <div className="grid grid-cols-2 w-full gap-8">
+      <div className="grid md:grid-cols-2 w-full gap-8">
         <div className="flex flex-col space-y-4">
           <Badge className="font-semibold md:text-2xl text-xl px-16 py-1 rounded-2xl">OLD WEST</Badge>
 
@@ -17,8 +17,8 @@ export function StoryTelling() {
       </div>
 
 
-      <div className="grid grid-cols-2 w-full gap-8">
-        <img src={shaolinImg} alt="" aria-hidden  />
+      <div className="grid md:grid-cols-2 grid-cols-1 w-full gap-8">
+        <img src={shaolinImg} alt="" aria-hidden className="order-2 md:order-1" />
 
         <div className="flex flex-col space-y-4">
           <Badge className="font-semibold md:text-2xl text-xl px-16 py-1 rounded-2xl">SHAOLIN</Badge>

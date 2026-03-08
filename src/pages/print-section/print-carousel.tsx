@@ -45,7 +45,7 @@ const SwiperCarousel = ({
         duration: 0.3,
         delay: 0.5,
       }}
-      className={cn("w-3xl relative", className)}
+      className={cn("max-md:w-full w-3xl max-w-3xl relative", className)}
     >
       <Swiper
         spaceBetween={spaceBetween}
@@ -66,7 +66,7 @@ const SwiperCarousel = ({
           rotate: 0,
           slideShadows: false,
           stretch: 0,
-          depth: 200,
+          depth: 100,
           modifier: 2.5,
         }}
         pagination={
