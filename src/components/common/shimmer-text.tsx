@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { animationFadeInDown } from "@/utils/animations";
 import { motion } from "motion/react";
 
 interface Text_01Props {
@@ -11,7 +12,7 @@ export function ShimmerText({
   className,
 }: Text_01Props) {
   return (
-    <div className="flex items-center justify-center">
+    <motion.div className="flex items-center justify-center" variants={animationFadeInDown}>
       <motion.div
         className="relative overflow-hidden"
         initial={{ opacity: 0, y: 0, }}
@@ -35,6 +36,6 @@ export function ShimmerText({
           {text}
         </motion.h1>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }

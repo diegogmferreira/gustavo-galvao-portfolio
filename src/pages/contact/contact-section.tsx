@@ -1,10 +1,11 @@
 import Logo from '@/assets/logo-svg';
 import { DotsVisualElement } from "@/components/common/dots-element";
 import { Button } from '@/components/ui/button';
+import { contactData } from '@/constants/contact-data';
 
 export function ContactSection() {
   return (
-    <section className="max-w-7xl w-full mx-auto px-10 md:space-y-20 space-y-10 mb-16 md:mb-32 max-md:mt-10">
+    <section id="contato" className="max-w-7xl w-full mx-auto px-10 md:space-y-20 space-y-10 mb-16 md:mb-32 max-md:mt-10">
       <div className="relative flex w-full gap-20 justify-between">
         <div className='md:max-w-[50%] w-full md:space-y-8 space-y-6 z-10'>
           <Logo />
@@ -18,20 +19,28 @@ export function ContactSection() {
           </p>
 
           <div className='flex md:flex-row flex-wrap gap-4'>
-            <Button variant="secondary">
-              WhatsApp
+            <Button variant="secondary" asChild>
+              <a href={contactData.whatsapp} target="_blank" rel="noopener noreferrer">
+                WhatsApp
+              </a>
             </Button>
 
-            <Button >
-              E-mail
+            <Button asChild>
+              <a href={contactData.email}>
+                E-mail
+              </a>
             </Button>
 
-            <Button variant="secondary">
-              Behance
+            <Button variant="secondary" asChild>
+              <a href={contactData.behance} target="_blank" rel="noopener noreferrer">
+                Behance
+              </a>
             </Button>
 
-            <Button>
-              Instagram
+            <Button asChild>
+              <a href={contactData.instagram} target="_blank" rel="noopener noreferrer">
+                Instagram
+              </a>
             </Button>
           </div>
         </div>

@@ -1,15 +1,15 @@
-import brunellaImg from "../assets/card-logos/brunella-logo.png";
-import carolineSchneiderImg from "../assets/card-logos/caroline-schneider-logo.png";
-import deboraAlmeidaImg from "../assets/card-logos/debora-almeida-logo.png";
-import djWagnerImg from "../assets/card-logos/dj-wagner.png";
-import flechaTransportesImg from "../assets/card-logos/flecha-logo.png";
-import marcadosPeloSangueImg from "../assets/card-logos/marcados-sangue-logo.png";
-import mariaGataImg from "../assets/card-logos/maria-gata-logo.png";
-import pandorgaImg from "../assets/card-logos/pandorga-logo.png";
-import pietroBikesImg from "../assets/card-logos/pietro-logo.png";
-import pureCompanyImg from "../assets/card-logos/pure-company-logo.png";
-import terezaImg from "../assets/card-logos/tereza-logo.png";
-import thermoPinkImg from "../assets/card-logos/thermopink.png";
+import brunellaImg from "../assets/card-logos/brunella-logo.webp";
+import carolineSchneiderImg from "../assets/card-logos/caroline-schneider-logo.webp";
+import deboraAlmeidaImg from "../assets/card-logos/debora-almeida-logo.webp";
+import djWagnerImg from "../assets/card-logos/dj-wagner.webp";
+import flechaTransportesImg from "../assets/card-logos/flecha-logo.webp";
+import marcadosPeloSangueImg from "../assets/card-logos/marcados-sangue-logo.webp";
+import mariaGataImg from "../assets/card-logos/maria-gata-logo.webp";
+import pandorgaImg from "../assets/card-logos/pandorga-logo.webp";
+import pietroBikesImg from "../assets/card-logos/pietro-logo.webp";
+import pureCompanyImg from "../assets/card-logos/pure-company-logo.webp";
+import terezaImg from "../assets/card-logos/tereza-logo.webp";
+import thermoPinkImg from "../assets/card-logos/thermopink.webp";
 
 export const cardList = [
   { title: "Logo Pure Company", image: pureCompanyImg, description: "Logo desenvolvido para Pure Company" },

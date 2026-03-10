@@ -1,11 +1,11 @@
 import { SwiperCarousel } from "./print-carousel";
 import { PrintSectionTitle } from "./print-section-title";
 
-import deliveryImg from "@/assets/printed-works/delivery.svg";
-import retroRockImg from "@/assets/printed-works/retro-rock-show.svg";
-import rodeoShow from "@/assets/printed-works/rodeo-show.svg";
-import teenageCult from "@/assets/printed-works/teenage-cult.svg";
-import womenDay from "@/assets/printed-works/women-days.svg";
+import deliveryImg from "@/assets/printed-works/delivery.webp";
+import retroRockImg from "@/assets/printed-works/retro-rock-show.webp";
+import rodeoShow from "@/assets/printed-works/rodeo-show.webp";
+import teenageCult from "@/assets/printed-works/teenage-cult.webp";
+import womenDay from "@/assets/printed-works/women-days.webp";
 
 export function PrintSection() {
   const images = [

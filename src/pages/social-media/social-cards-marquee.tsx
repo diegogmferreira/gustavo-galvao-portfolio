@@ -52,7 +52,7 @@ export function SocialCardsMarquee() {
               >
                 <Card className={cn("bg-[#040404] py-0 gap-0 rounded-3xl")}>
                   <CardContent className="px-0 ">
-                    <img src={card.url} aria-hidden className="max-h-96 rounded-tl-3xl rounded-tr-3xl" />
+                    <img src={card.url} alt={card.name} className="max-h-96 rounded-tl-3xl rounded-tr-3xl" />
                   </CardContent>
 
                   <CardFooter className="py-5">
@@ -89,7 +89,7 @@ export function SocialCardsMarquee() {
               >
                 <Card className={cn("bg-[#040404] py-0 gap-0 rounded-3xl")}>
                   <CardContent className="px-0 ">
-                    <img src={card.url} aria-hidden className="max-h-96 rounded-tl-3xl rounded-tr-3xl" />
+                    <img src={card.url} alt={card.name} className="max-h-96 rounded-tl-3xl rounded-tr-3xl" />
                   </CardContent>
 
                   <CardFooter className="py-5">

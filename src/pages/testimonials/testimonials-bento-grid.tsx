@@ -1,10 +1,10 @@
 import casaDoNeonImg from '@/assets/testimonials/casa-do-neon.svg'
 import policlinImg from '@/assets/testimonials/policlin-logo.svg'
 import runningImg from '@/assets/testimonials/running-logo.svg'
-import testimonial1Img from '@/assets/testimonials/testimonial-1.svg'
-import testimonial2Img from '@/assets/testimonials/testimonial-2.svg'
-import testimonial3Img from '@/assets/testimonials/testimonial-3.svg'
-import testimonial4Img from '@/assets/testimonials/testimonial-4.svg'
+import testimonial1Img from '@/assets/testimonials/testimonial-1.webp'
+import testimonial2Img from '@/assets/testimonials/testimonial-2.webp'
+import testimonial3Img from '@/assets/testimonials/testimonial-3.webp'
+import testimonial4Img from '@/assets/testimonials/testimonial-4.webp'
 import xisDoBolaImg from '@/assets/testimonials/xis-do-bola-logo.svg'
 import { cn } from '@/lib/utils'
 
@@ -12,10 +12,10 @@ export function TestimonialsBentoGrid() {
   return (
     <div className='grid grid-cols-2 md:grid-cols-4 gap-5 '>
       <TestimonialBentoCard>
-        <img src={testimonial1Img} alt='' aria-hidden />
+        <img src={testimonial1Img} alt="Depoimento de cliente" />
       </TestimonialBentoCard>
-      <TestimonialBentoCard className='p-6 bg-black'>
-        <img src={casaDoNeonImg} alt='' aria-hidden />
+      <TestimonialBentoCard className="p-6 bg-black">
+        <img src={casaDoNeonImg} alt="Logo Casa do Neon" />
       </TestimonialBentoCard>
       <TestimonialBentoCard className='bg-emerald-300 col-span-2 p-4'>
         <div className='flex flex-col justify-between h-full text-background'>
@@ -35,17 +35,17 @@ export function TestimonialsBentoGrid() {
       </TestimonialBentoCard>
 
 
-      <TestimonialBentoCard className='p-6 bg-black'>
-        <img src={policlinImg} alt='' aria-hidden />
+      <TestimonialBentoCard className="p-6 bg-black">
+        <img src={policlinImg} alt="Logo Policlin" />
       </TestimonialBentoCard>
       <TestimonialBentoCard>
-        <img src={testimonial2Img} alt='' aria-hidden />
+        <img src={testimonial2Img} alt="Depoimento de cliente" />
       </TestimonialBentoCard>
       <TestimonialBentoCard>
-        <img src={testimonial3Img} alt='' aria-hidden />
+        <img src={testimonial3Img} alt="Depoimento de cliente" />
       </TestimonialBentoCard>
-      <TestimonialBentoCard className='p-6 bg-black'>
-        <img src={runningImg} alt='' aria-hidden />
+      <TestimonialBentoCard className="p-6 bg-black">
+        <img src={runningImg} alt="Logo Running" />
       </TestimonialBentoCard>
 
       <TestimonialBentoCard className='bg-primary col-span-2 p-4'>
@@ -64,11 +64,11 @@ export function TestimonialsBentoGrid() {
           </div>
         </div>
       </TestimonialBentoCard>
-      <TestimonialBentoCard className='p-6 bg-black'>
-        <img src={xisDoBolaImg} alt='' aria-hidden />
+      <TestimonialBentoCard className="p-6 bg-black">
+        <img src={xisDoBolaImg} alt="Logo Xis do Bola" />
       </TestimonialBentoCard>
       <TestimonialBentoCard>
-        <img src={testimonial4Img} alt='' aria-hidden />
+        <img src={testimonial4Img} alt="Depoimento de cliente" />
       </TestimonialBentoCard>
     </div>
   )

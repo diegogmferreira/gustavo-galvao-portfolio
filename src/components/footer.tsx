@@ -2,6 +2,7 @@ import { BehanceLogo } from '@/assets/behance-svg';
 import { InstagramLogo } from '@/assets/instagram-svg';
 import Logo from '@/assets/logo-svg';
 import { WhatsappLogo } from '@/assets/whatsapp-svg';
+import { contactData } from '@/constants/contact-data';
 
 export function Footer() {
   return (
@@ -10,10 +11,15 @@ export function Footer() {
         <Logo className='w-24' />
 
         <div className='flex gap-8 items-center justify-center'>
-          <InstagramLogo className='w-6' />
-          <WhatsappLogo className='w-6'/>
-          <BehanceLogo className='w-8' />
-
+          <a href={contactData.instagram} target="_blank" rel="noopener noreferrer">
+            <InstagramLogo className='w-6' />
+          </a>
+          <a href={contactData.whatsapp} target="_blank" rel="noopener noreferrer">
+            <WhatsappLogo className='w-6'/>
+          </a>
+          <a href={contactData.behance} target="_blank" rel="noopener noreferrer">
+            <BehanceLogo className='w-8' />
+          </a>
         </div>
       </div>
     </footer>

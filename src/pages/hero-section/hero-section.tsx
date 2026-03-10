@@ -1,12 +1,18 @@
-import heroImg from "@/assets/hero-image.svg";
+import heroImg from "@/assets/hero-image.webp";
 import { DotsVisualElement } from "@/components/common/dots-element";
 import { GradientText } from "@/components/common/gradient-text-";
 import { TypewriterTitle } from "@/components/common/typewriter-text";
 import { Button } from "@/components/ui/button";
+import { contactData } from "@/constants/contact-data";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { animationFadeInDown, animationStagger } from "@/utils/animations";
+import { motion } from "motion/react";
 
-export function HeroSection() {
+interface HeroSectionProps {
+  isPreloaderDone?: boolean;
+}
+
+export function HeroSection({ isPreloaderDone = true }: HeroSectionProps) {
   // const [transform, setTransform] = useState(
   //   "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)"
   // );
@@ -32,38 +38,58 @@ export function HeroSection() {
 
   return (
     <>
-      <section className="relative flex items-center justify-center overflow-hidden ">
-        <div
+      <motion.section
+        id="sobre"
+        className="relative flex items-center justify-center overflow-hidden"
+        variants={animationStagger}
+        initial="initial"
+        animate={isPreloaderDone ? "animate" : "initial"}
+      // viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.div
           className={cn(
             "relative z-10  rounded-2xl overflow-hidden ",
             "max-md:absolute max-md:opacity-40"
           )}
+          variants={animationFadeInDown}
         >
-          <img
-            src={heroImg}
-            className="w-full h-full object-cover"
-          />
-        </div>
+          <div className="relative h-full w-full">
+            <img
+              src={heroImg}
+              alt="Gustavo Galvão - Designer e Artista Visual"
+              className="w-full h-full object-cover"
+            />
+            <div
+              className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none"
+            />
+          </div>
+        </motion.div>
 
-        <div className="relative z-10 lg:max-w-2xl md:max-w-lg">
+        <motion.div className="relative z-10 lg:max-w-2xl md:max-w-lg" variants={animationStagger}>
           <DotsVisualElement className="max-md:hidden" />
 
-          <div
+          <motion.div
             className={cn(
               "max-md:mx-10 flex flex-col pt-20 md:pt-64 md:mt-0 lg:ml-16 text-left space-y-5",
               "2xl:-translate-x-56 xl:-translate-x-40 lg:-translate-x-32 "
             )}
+            variants={animationStagger}
           >
-            <GradientText
-              className="text-3xl md:text-4xl font-bold"
-              animationDuration={2}
+            <h1 className="sr-only">Gustavo Galvão | Designer & Artista Visual</h1>
+            <motion.div
+              variants={animationFadeInDown}
             >
-              SOBRE:
-            </GradientText>
+              <GradientText
+                className="text-3xl md:text-4xl font-bold"
+                animationDuration={2}
+              >
+                SOBRE:
+              </GradientText>
+            </motion.div>
             {/* <h2 className="text-3xl md:text-4xl font-bold text-[#d63c2f]">
               SOBRE:
             </h2> */}
-            <span className="text-neutral-300 leading-relaxed text-justify ">
+            <motion.span className="text-neutral-300 leading-relaxed text-justify " variants={animationFadeInDown}>
               Me chamo <TypewriterTitle sequences={[{ text: "Gustavo Galvão", deleteAfter: false }]} />,
               sou designer desde 2005, com experiência em projetos para grandes empresas e diferentes segmentos do mercado.
               Minha atuação envolve criação de identidades visuais, desenvolvimento de campanhas publicitárias, social media,
@@ -71,19 +97,22 @@ export function HeroSection() {
               poder da criação para transformar ideias em experiências visuais que conectam pessoas e marcas. Cada projeto
               é uma oportunidade de unir técnica, sensibilidade e propósito, sempre em busca de resultados que inspirem e
               façam a diferença.
-            </span>
-            <div className="flex gap-4 max-md:justify-center">
-              <Button asChild variant="secondary">
-                <a href="#" > Behance </a>
-              </Button>
-
-              <Button asChild>
-                <a href="#" > Instagram </a>
-              </Button>
+            </motion.span>
+            <div className="flex gap-4 max-md:justify-center" >
+              <motion.div variants={animationFadeInDown}>
+                <Button asChild variant="secondary">
+                  <a href={contactData.behance} target="_blank" rel="noopener noreferrer"> Behance </a>
+                </Button>
+              </motion.div>
+              <motion.div variants={animationFadeInDown}>
+                <Button asChild>
+                  <a href={contactData.instagram} target="_blank" rel="noopener noreferrer"> Instagram </a>
+                </Button>
+              </motion.div>
             </div>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        </motion.div>
+      </motion.section>
 
 
 

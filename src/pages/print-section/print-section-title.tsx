@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { contactData } from "@/constants/contact-data";
 
 export function PrintSectionTitle() {
   return (
@@ -12,7 +13,7 @@ export function PrintSectionTitle() {
           className="bg-transparent border border-white"
           asChild
         >
-          <a href="">
+          <a href={contactData.instagram} target="_blank" rel="noopener noreferrer">
             Instagram
           </a>
         </Button>
@@ -22,7 +23,7 @@ export function PrintSectionTitle() {
           className="shadow-2xl"
           asChild
         >
-          <a href="">
+          <a href={contactData.behance} target="_blank" rel="noopener noreferrer">
             Behance
           </a>
         </Button>

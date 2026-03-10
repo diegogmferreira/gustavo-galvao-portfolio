@@ -1,6 +1,6 @@
 import type { SVGAttributes } from "react";
 
-export const WhatsappLogo = ({ className, ...props }: SVGAttributes<SVGElement>) => (
+export const WhatsappLogo = ({ className }: SVGAttributes<SVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className || "w-7 h-auto"}

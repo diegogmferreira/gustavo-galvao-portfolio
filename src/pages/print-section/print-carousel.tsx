@@ -91,7 +91,7 @@ const SwiperCarousel = ({
           <SwiperSlide key={index} className="w-full">
             <Card className={cn("bg-[#040404] py-0 gap-0 rounded-4xl")}>
               <CardContent className="px-0 ">
-                <img src={image.src} aria-hidden className="rounded-tl-4xl rounded-tr-4xl" />
+                <img src={image.src} alt={image.alt} className="rounded-tl-4xl rounded-tr-4xl" />
               </CardContent>
 
               <CardFooter className="py-3">

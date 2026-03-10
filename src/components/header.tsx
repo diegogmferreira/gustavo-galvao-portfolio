@@ -17,6 +17,7 @@ import {
 import { cn } from '@/lib/utils'
 
 import Logo from '@/assets/logo-svg'
+import { contactData } from '@/constants/contact-data'
 import { useEffect, useState } from 'react'
 
 export type NavigationSection = {
@@ -51,11 +52,11 @@ export function Header({ navigationData, className }: HeaderProps) {
 
   return (
     <header className={cn(
-      'bg-background sticky top-0 z-[100] h-16 transition-all',
+      'bg-background sticky top-0 z-[100] h-16 transition-all px-6 lg:px-8',
       { "border-b bg-background/75 shadow-md backdrop-blur": scrolled },
       className
     )}>
-      <div className='mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-6 lg:px-8'>
+      <div className='mx-auto flex h-full max-w-7xl items-center justify-between gap-6'>
         <a href='#' className='w-24'>
           <Logo />
         </a>
@@ -79,17 +80,17 @@ export function Header({ navigationData, className }: HeaderProps) {
         {/* Navbar Buttons */}
         <div className='flex gap-5 max-md:hidden'>
           <Button className='rounded-lg max-md:hidden' asChild variant="secondary">
-            <a href='#'>Email</a>
+            <a href={contactData.email}>Email</a>
           </Button>
           <Button className='rounded-lg max-md:hidden' asChild>
-            <a href='#'>WhatsApp</a>
+            <a href={contactData.whatsapp}>WhatsApp</a>
           </Button>
         </div>
 
         {/* Navigation for small screens */}
         <div className='flex gap-3 md:hidden'>
           <Button className='rounded-lg' asChild>
-            <a href='#'>WhatsApp</a>
+            <a href={contactData.whatsapp}>WhatsApp</a>
           </Button>
 
           <DropdownMenu>

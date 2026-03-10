@@ -1,5 +1,5 @@
-import cowboyImg from "@/assets/cowboy.png"
-import shaolinImg from "@/assets/shaolin.png"
+import cowboyImg from "@/assets/cowboy.webp"
+import shaolinImg from "@/assets/shaolin.webp"
 import { Badge } from "@/components/ui/badge"
 
 export function StoryTelling() {
@@ -13,12 +13,12 @@ export function StoryTelling() {
             Este projeto nasceu da ideia de transformar uma simples paisagem em uma narrativa visual poderosa. A proposta era criar uma cena que contasse uma história sem precisar de palavras — um cowboy solitário, guiado apenas pela luz da lua e da sua lanterna, observando um trem ao longe, símbolo de novos caminhos e oportunidades. Cada detalhe foi pensado para transmitir atmosfera, emoção e movimento: a iluminação noturna, a profundidade do cânion e a composição cinematográfica foram criadas para levar o espectador a um universo de aventura e introspecção. O resultado é uma peça que une técnica e narrativa, transformando imagem em experiência.
           </p>
         </div>
-        <img src={cowboyImg} alt="" aria-hidden loading="lazy" />
+        <img src={cowboyImg} alt="Cowboy no Velho Oeste" />
       </div>
 
 
       <div className="grid md:grid-cols-2 grid-cols-1 w-full gap-8">
-        <img src={shaolinImg} alt="" aria-hidden loading="lazy" className="max-md:hidden" />
+        <img src={shaolinImg} alt="Templo Shaolin nas montanhas" className="max-md:hidden" />
 
         <div className="flex flex-col space-y-4">
           <Badge className="font-semibold md:text-2xl text-xl px-16 py-1 rounded-2xl">SHAOLIN</Badge>
@@ -27,7 +27,7 @@ export function StoryTelling() {
           </p>
         </div>
 
-        <img src={shaolinImg} alt="" aria-hidden loading="lazy" className="md:hidden" />
+        <img src={shaolinImg} alt="Templo Shaolin nas montanhas" className="md:hidden" />
 
       </div>
     </div>
