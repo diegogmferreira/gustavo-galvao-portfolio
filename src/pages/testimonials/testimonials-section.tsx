@@ -1,4 +1,4 @@
-import { animationFadeInDown, animationFadeInLeft, animationFadeInRight, animationStagger } from "@/utils/animations";
+import { animationFadeInLeft, animationFadeInRight, animationStagger } from "@/utils/animations";
 import { motion } from "framer-motion";
 import { TestimonialsBentoGrid } from "./testimonials-bento-grid";
 

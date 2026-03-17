@@ -1,7 +1,7 @@
 import socialMediaLibertyImg from "@/assets/social-media/social-media-liberty.webp"
 import { Card, CardContent, CardDescription, CardFooter } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
-import { animationStagger, cardFillAnimation, invertedAnimationStagger, titleFillAnimation, titleStrokeAnimation } from "@/utils/animations"
+import { animationFadeInUp, animationStagger, cardFillAnimation, invertedAnimationStagger, titleStrokeAnimation } from "@/utils/animations"
 import { motion } from "framer-motion"
 import { SocialCardsMarquee } from "./social-cards-marquee"
 
@@ -19,7 +19,7 @@ export function SocialMediaService() {
           <motion.div className="flex flex-col" variants={invertedAnimationStagger}>
             <motion.p
               className="uppercase text-white font-semibold md:text-7xl text-6xl leading-8"
-              variants={titleFillAnimation}
+              variants={animationFadeInUp}
             >
               SOCIAL
             </motion.p>
@@ -31,8 +31,6 @@ export function SocialMediaService() {
                 "[-webkit-text-stroke:2px_#DE0147]"
               )}
               variants={titleStrokeAnimation}
-              initial="initial"
-              animate="animate"
             >
               MEDIA
             </motion.p>

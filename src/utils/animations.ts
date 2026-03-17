@@ -137,7 +137,7 @@ export const titleFillAnimation = {
     opacity: 1,
     transition: {
       duration: 0.7,
-      delay: 0.5,
+      delay: 0.8,
       ease: animationEasing
     }
   }

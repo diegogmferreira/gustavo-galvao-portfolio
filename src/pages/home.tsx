@@ -33,7 +33,7 @@ const navigationData: NavigationSection[] = [
 ]
 
 export function Home() {
-	const [isPreloaderDone, setIsPreloaderDone] = useState(true);
+	const [isPreloaderDone, setIsPreloaderDone] = useState(false);
 
 	return (
 		<motion.div
@@ -42,7 +42,7 @@ export function Home() {
 			initial="initial"
 			animate="animate"
 		>
-			{/* <Preloader onComplete={() => setIsPreloaderDone(true)} /> */}
+			<Preloader onComplete={() => setIsPreloaderDone(true)} />
 			<Header navigationData={navigationData} />
 			<ScrollProgress className="top-16 opacity-80" />
 
