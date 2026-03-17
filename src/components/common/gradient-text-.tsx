@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { animationFadeInDown } from "@/utils/animations";
 import { motion } from "motion/react";
 
 interface GradientTextProps {
@@ -34,6 +35,7 @@ export function GradientText({
         backgroundSize: animate ? "200% 200%" : "100% 100%",
       }}
       {...animationProps}
+      variants={animationFadeInDown}
     >
       {children}
     </motion.span>

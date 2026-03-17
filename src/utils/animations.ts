@@ -44,11 +44,50 @@ export const animationFadeInUp = {
     y: -60,
     opacity: 0,
     transition: {
-      duration: 0.6, ease: animationEasing
+      duration: 0.6,
+      ease: animationEasing
     }
   },
   animate: {
     y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      // delay: 0.5,
+      ease: animationEasing
+    }
+  }
+};
+
+export const animationFadeInLeft = {
+  initial: {
+    x: -60,
+    opacity: 0,
+    transition: {
+      duration: 0.4, ease: animationEasing
+    }
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      // delay: 0.5,
+      ease: animationEasing
+    }
+  }
+};
+
+export const animationFadeInRight = {
+  initial: {
+    x: 60,
+    opacity: 0,
+    transition: {
+      duration: 0.4, ease: animationEasing
+    }
+  },
+  animate: {
+    x: 0,
     opacity: 1,
     transition: {
       duration: 0.6,

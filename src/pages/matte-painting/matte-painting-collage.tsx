@@ -2,6 +2,7 @@ import Masonry from "@/components/common/masonry-collage";
 import { Card } from "@/components/ui/card";
 import { collageImages, collageImagesObj } from "@/constants/collage-list";
 import { cn } from "@/lib/utils";
+import { animationFadeInDown, animationFadeInUp, animationStagger } from "@/utils/animations";
 import { motion } from "motion/react";
 
 export function MattePaintingCollage() {
@@ -28,8 +29,11 @@ export function MattePaintingCollage() {
 
   return (
     <>
-      <Card className="xl:block hidden rounded-4xl p-0 overflow-hidden">
-        <div className="grid grid-cols-12 auto-rows-[220px] gap-0">
+      <Card className="xl:block hidden rounded-4xl p-0 overflow-hidden bg-transparent">
+        <motion.div
+          className="grid grid-cols-12 auto-rows-[220px] gap-0"
+          variants={animationStagger}
+        >
           <CollageImage src={spiderManPosterMovieImg} className="col-span-3 row-span-2" />
           <CollageImage src={starWarsSandDesertWebImg} className="col-span-6 row-span-1 scale-[118%] ml-12 object-contain" />
           <div className="col-span-3 row-span-1 relative">
@@ -60,7 +64,7 @@ export function MattePaintingCollage() {
           <CollageImage src={wizardImg} className="col-span-4 row-span-1 object-cover z-50 scale-[130%] -mt-8" />
           <CollageImage src={spidermanBuildings} className="col-span-4 row-span-1 object-cover z-40 scale-110 -mt-13 ml-6" />
           <CollageImage src={spidermanBuildings2} className="col-span-4 row-span-1 object-cover z-30 scale-[130%] -mt-8 ml-6" />
-        </div>
+        </motion.div>
       </Card>
 
       <div className="xl:hidden block">
@@ -93,13 +97,13 @@ function CollageImage({ src, className }: { src: string, className: string }) {
         filter: "drop-shadow(0 8px 18px rgba(0,0,0,0.35))",
         borderRadius: "16px"
       }}
-      initial={{ opacity: 0.95 }}
       transition={{
         type: "spring",
         stiffness: 260,
         damping: 18,
         duration: 0.25
       }}
+      variants={animationFadeInUp}
     />
   );
 }

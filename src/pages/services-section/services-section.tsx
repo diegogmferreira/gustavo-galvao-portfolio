@@ -4,19 +4,14 @@ import { motion } from "motion/react";
 import { LogoExplanation } from "./logo-creation-explanation";
 import { ServiceCard } from "./services-card";
 
-interface ServicesSectionProps {
-  isPreloaderDone?: boolean;
-}
-
-export function ServicesSection({ isPreloaderDone = true }: ServicesSectionProps) {
+export function ServicesSection() {
   return (
     <motion.section
       id="servicos"
       className="w-full max-w-7xl mx-auto px-10 md:space-y-16 space-y-8"
       variants={animationStagger}
       initial="initial"
-      animate={isPreloaderDone ? "animate" : "initial"}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
       whileInView="animate"
     >
       <SectionTitle

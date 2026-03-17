@@ -7,7 +7,13 @@ import { SocialCardsMarquee } from "./social-cards-marquee"
 
 export function SocialMediaService() {
   return (
-    <motion.section className="max-w-[1920px] w-full mx-auto px-10 md:space-y-20" variants={animationStagger} initial="initial" animate="animate" viewport={{ amount: 0.2, margin: "-10%", once: true }}>
+    <motion.section
+      className="max-w-[1920px] w-full mx-auto px-10 md:space-y-20"
+      variants={animationStagger}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ amount: 0.2, once: true }}
+    >
       <div className="max-w-7xl mx-auto px-10">
         <motion.div className="flex flex-col md:flex-row py-10 items-center justify-between gap-10" variants={animationStagger}>
           <motion.div className="flex flex-col" variants={invertedAnimationStagger}>

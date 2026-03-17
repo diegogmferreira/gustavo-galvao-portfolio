@@ -86,9 +86,7 @@ export function HeroSection({ isPreloaderDone = true }: HeroSectionProps) {
                 SOBRE:
               </GradientText>
             </motion.div>
-            {/* <h2 className="text-3xl md:text-4xl font-bold text-[#d63c2f]">
-              SOBRE:
-            </h2> */}
+
             <motion.span className="text-neutral-300 leading-relaxed text-justify " variants={animationFadeInDown}>
               Me chamo <TypewriterTitle sequences={[{ text: "Gustavo Galvão", deleteAfter: false }]} />,
               sou designer desde 2005, com experiência em projetos para grandes empresas e diferentes segmentos do mercado.

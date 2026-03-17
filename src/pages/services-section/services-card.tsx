@@ -8,7 +8,6 @@ export function ServiceCard() {
   return (
     <motion.div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4"
       variants={animationStagger}
-      transition={{ delay: 0.5 }}
     >
       {cardList.map((card) => (
         <motion.div

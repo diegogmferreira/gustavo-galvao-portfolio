@@ -4,6 +4,8 @@ import { Header, type NavigationSection } from "@/components/header";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { HeroSection } from "@/pages/hero-section/hero-section";
 import { ServicesSection } from "@/pages/services-section/services-section";
+import { animationStagger } from "@/utils/animations";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { ContactSection } from "./contact/contact-section";
 import { MattePaintingSection } from "./matte-painting/matte-painting-section";
@@ -34,7 +36,12 @@ export function Home() {
 	const [isPreloaderDone, setIsPreloaderDone] = useState(true);
 
 	return (
-		<div className="min-h-svh w-full bg-background">
+		<motion.div
+			className="min-h-svh w-full bg-background"
+			variants={animationStagger}
+			initial="initial"
+			animate="animate"
+		>
 			{/* <Preloader onComplete={() => setIsPreloaderDone(true)} /> */}
 			<Header navigationData={navigationData} />
 			<ScrollProgress className="top-16 opacity-80" />
@@ -50,6 +57,6 @@ export function Home() {
 			</main>
 
 			<Footer />
-		</div>
+		</motion.div>
 	)
-}
+} 

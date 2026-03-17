@@ -11,9 +11,9 @@ export function MattePaintingSection() {
       className="w-full max-w-7xl mx-auto px-10 space-y-16"
       variants={animationStagger}
       initial="initial"
-      animate="animate"
-      viewport={{ once: true, amount: 0.2 }}
-      whileInView="animate">
+      viewport={{ once: true, amount: 0.1 }}
+      whileInView="animate"
+    >
       <SectionTitle
         title="Matte Painting"
         subtitle="Trabalhos Publicitários"

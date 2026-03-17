@@ -1,6 +1,6 @@
 import { animationFadeInDown, animationStagger } from "@/utils/animations";
 import { motion } from "motion/react";
-import { ShimmerText } from "./shimmer-text";
+import { GradientText } from "./gradient-text-";
 
 interface IProps {
   title: string;
@@ -9,14 +9,16 @@ interface IProps {
 
 export function SectionTitle({ subtitle, title }: IProps) {
   return (
-    <motion.div className="flex flex-col items-center justify-center gap-4" variants={animationStagger}>
-      <ShimmerText text={title} className="uppercase" />
-      {/* <GradientText
+    <motion.div
+      className="flex flex-col items-center justify-center gap-4"
+      variants={animationStagger}
+    >
+      <GradientText
         className="text-4xl md:text-5xl font-bold uppercase"
         animationDuration={2}
-      > 
+      >
         {title}
-      </GradientText> */}
+      </GradientText>
       <motion.p className="md:text-2xl text-lg text-foreground" variants={animationFadeInDown}>{subtitle}</motion.p>
     </motion.div>
   )

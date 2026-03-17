@@ -7,10 +7,15 @@ import testimonial3Img from '@/assets/testimonials/testimonial-3.webp'
 import testimonial4Img from '@/assets/testimonials/testimonial-4.webp'
 import xisDoBolaImg from '@/assets/testimonials/xis-do-bola-logo.svg'
 import { cn } from '@/lib/utils'
+import { animationFadeInDown, animationStagger } from '@/utils/animations'
+import { motion, type HTMLMotionProps } from 'framer-motion'
 
 export function TestimonialsBentoGrid() {
   return (
-    <div className='grid grid-cols-2 md:grid-cols-4 gap-5 '>
+    <motion.div
+      className='grid grid-cols-2 md:grid-cols-4 gap-5 '
+      variants={animationStagger}
+    >
       <TestimonialBentoCard>
         <img src={testimonial1Img} alt="Depoimento de cliente" />
       </TestimonialBentoCard>
@@ -70,12 +75,16 @@ export function TestimonialsBentoGrid() {
       <TestimonialBentoCard>
         <img src={testimonial4Img} alt="Depoimento de cliente" />
       </TestimonialBentoCard>
-    </div>
+    </motion.div>
   )
 }
 
-function TestimonialBentoCard({ className, ...props }: React.ComponentProps<"div">) {
+function TestimonialBentoCard({ className, ...props }: HTMLMotionProps<"div">) {
   return (
-    <div className={cn('flex items-center justify-center rounded-[20px] border shadow-sm', className)} {...props} />
+    <motion.div
+      className={cn('flex items-center justify-center rounded-[20px] border shadow-sm', className)}
+      variants={animationFadeInDown}
+      {...props}
+    />
   )
 }
