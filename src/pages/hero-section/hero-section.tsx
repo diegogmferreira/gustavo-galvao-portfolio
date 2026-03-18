@@ -47,13 +47,13 @@ export function HeroSection({ isPreloaderDone = true }: HeroSectionProps) {
       // viewport={{ once: true, amount: 0.2 }}
       >
         <motion.div
+          variants={animationFadeInDown}
           className={cn(
             "relative z-10  rounded-2xl overflow-hidden ",
-            "max-md:absolute max-md:opacity-40"
+            "max-md:absolute"
           )}
-          variants={animationFadeInDown}
         >
-          <div className="relative h-full w-full">
+          <div className={cn("relative h-full w-full", "max-md:opacity-20")}>
             <img
               src={heroImg}
               alt="Gustavo Galvão - Designer e Artista Visual"
