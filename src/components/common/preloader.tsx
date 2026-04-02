@@ -1,7 +1,6 @@
 import Logo from "@/assets/logo-svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FlickeringGrid } from "../ui/flickring-grid";
 
 export interface PreloaderProps {
   onComplete?: () => void;

@@ -2,7 +2,7 @@ import Masonry from "@/components/common/masonry-collage";
 import { Card } from "@/components/ui/card";
 import { collageImages, collageImagesObj } from "@/constants/collage-list";
 import { cn } from "@/lib/utils";
-import { animationFadeInDown, animationFadeInUp, animationStagger } from "@/utils/animations";
+import { animationFadeInUp, animationStagger } from "@/utils/animations";
 import { motion } from "motion/react";
 
 export function MattePaintingCollage() {
