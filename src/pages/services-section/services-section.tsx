@@ -4,7 +4,11 @@ import { motion } from "motion/react";
 import { LogoExplanation } from "./logo-creation-explanation";
 import { ServiceCard } from "./services-card";
 
-export function ServicesSection() {
+interface ServicesSectionProps {
+  isPreloaderDone?: boolean;
+}
+
+export function ServicesSection({ isPreloaderDone = true }: ServicesSectionProps) {
   return (
     <motion.section
       id="servicos"

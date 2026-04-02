@@ -52,6 +52,7 @@ export function HeroSection({ isPreloaderDone = true }: HeroSectionProps) {
             "relative z-10  rounded-2xl overflow-hidden ",
             "max-md:absolute"
           )}
+          variants={animationFadeInDown}
         >
           <div className={cn("relative h-full w-full", "max-md:opacity-20")}>
             <img
@@ -86,7 +87,6 @@ export function HeroSection({ isPreloaderDone = true }: HeroSectionProps) {
                 SOBRE:
               </GradientText>
             </motion.div>
-
             <motion.span className="text-neutral-300 leading-relaxed text-justify " variants={animationFadeInDown}>
               Me chamo <TypewriterTitle sequences={[{ text: "Gustavo Galvão", deleteAfter: false }]} />,
               sou designer desde 2005, com experiência em projetos para grandes empresas e diferentes segmentos do mercado.
@@ -108,9 +108,9 @@ export function HeroSection({ isPreloaderDone = true }: HeroSectionProps) {
                 </Button>
               </motion.div>
             </div>
-          </motion.div>
-        </motion.div>
-      </motion.section>
+          </motion.div >
+        </motion.div >
+      </motion.section >
 
 
 
